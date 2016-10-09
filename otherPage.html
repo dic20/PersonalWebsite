@@ -6,123 +6,86 @@
 		<meta name="author" content="Daniel Critchfield">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
-		<link rel="stylesheet" type="text/css" href="mainPage.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 500px)" href="./css/otherPage.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 499px)" href="./css/mobileStyle.css">
   </head>
   <body>
-		<div id="mainContainer">
-			<!--Head section of page, conatins main nav bar-->
-			<div id="topOfPage">
-				<nav id="navBar">
-					<div id="logoContainer">
-						<p>
-							Logo Goes Here!!!!!!!!!
-						</p>
-					</div>
-					<div id="mainNavList">
-						<div class="nav-list-item" onclick="displayText()" name="TextTab">
-							<p>
-								This
-							</p>
-						</div>
-						<div class="nav-list-item" onclick="displayInfo()" name="InfoTab">
-							<p>
-								Is
-							</p>
-						</div>
-						<div class="nav-list-item" onclick="displayContact()" name="ContactTab">
-							<p>
-								Different
-							</p>
-						</div>
-						<div class="nav-list-item" onclick="displayOtherTab()" name="OtherTab">
-							<p>
-								For Reals
-							</p>
-						</div>
-					</div>
-				</nav>
+		<div id="pageContainer">
+			<div class="navbar-fixed-top">
+				<div id="Home">
+					Home
+				</div>
+				<div id="About">
+					About
+				</div>
+				<div id="Contact">
+					Contact
+				</div>
+				<div id="menuIcon">
+					&#9776;
+				</div>
 			</div>
-			
-			<!--Main page contents-->
-			<div class="inner-container">
-				<div id="mainContent">
+			<div id="navList">
+				<ul>
+					<li id="home">Home</li>
+					<li id="about">About</li>
+					<li id="contact">Contact</li>
+					<li>Other</li>
+				</ul>
+			</div>
+			<div id="mainContent">
+				<div id="aboutPage">
 					<div class="inner-content">
-						<div id="text">
-							<p>
-								<h1>Text</h1>
-								
-								<h3>Here is a little sub header text</h3>
-							</p>
-							<div class="content-container">
-								<p>
-									This is where the main content will go.
-								</p>
-							</div>
-						</div>
-						<div id="info">
-							<p>
-								<h1>Info</h1>
-								
-								<h3>Computer Engineering at University of Pittsburgh</h3>
-							</p>
-							<div class="content-container">
-								<p>
-									This is where the main content will go.
-								</p>
-							</div>
-						</div>
-						<div id="contact">
-							<p>
-								<h1>Contact</h1>
-							</p>
-							<div class="content-container">
-								<form name="contact-form" method="post" action="#">
-									<div class="form-content">
-										<label for="fname">First Name:</label>
-										<input type="text" id="fname" name="FirstName">
-									</div>
-									<div class="form-content">
-										<label>Last Name:</label>
-										<input type="text" id="lname" name="LastName">
-									</div>
-									<div class="form-content">
-										<label for="Email">Email:</label>
-										<input type="email" id="Email" name="Email">
-									</div>
-									<div class="form-content">
-										<label for="Comment">Extra Information:</label>
-										<textarea type="text-area" id="Comment" name="comment"></textarea>
-									</div>
-									<p>
-										<input class="submit-format" type="submit" value="Submit">
-									</p>
-								</form>
-							</div>
-						</div>
-						<div id="other">
-							<p>
-								<h1>Other</h1>
-								
-								<h3>Here is a little sub header text</h3>
-							</p>
-							<div class="content-container">
-								<p>
-									This is where the main content will go.
-								</p>
-							</div>
-						</div>
+						Here is some Text
 					</div>
 				</div>
-				<div id="bottomOfPage">
-					<p>
-						&#169; Copyright 2016 
-					</p>
+				
+				<div id="contactPage">
+					<form id="contactForm" method="get" action="/formsubmit.php">
+						<div>
+							<label class="labelFormat" for="fname">First Name:</label>
+							<input type="text" id="fname" value="" name="fname">
+						</div>
+						<div>
+							<label class="labelFormat" for="lname">Last Name:</label>
+							<input type="text" id="lname" value="" name="lname">
+						</div>
+						<div>
+							<label class="labelFormat" for="email">Email:</label>
+							<input type="text" id="email" value="" name="email">
+						</div>
+						<div>
+							<label class="labelFormat" for="comments">Comments:</label>
+							<textarea type="text-area" id="comments" value="" name="comments"></textarea>
+						</div>
+						<div id="buttonDiv">
+							<button id="submitFormat" name="submit" value="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+				
+				<div id="homePage">
+					<div class="inner-content">
+						<div class="hollow-sphere">
+							<p>
+								Text
+							</p>
+						</div>
+						<div class="hollow-sphere">
+						
+						</div>
+						<div class="hollow-sphere">
+						
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		<noscript>You Must Turn On JavaScript For The Full Website!</noscript>
 		
-		<script src="mainScript.js"></script>
+		<script src="./js/jquery-3.1.1.min.js"></script>
+		<script src="./js/loadScript.js"></script>
+		<script src="./js/contactValidation.js"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<title>Daniel Critchfield Personal Website</title>
+	
+		<meta name="author" content="Daniel Critchfield">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 500px)" href="./css/LandingPage.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 499px)" href="./css/mobileLandingStyle.css">
+  </head>
+  <body>
+		<div id="mainContainer">
+			<div class="carousel-container">
+				<div id="leftImage"></div>
+				<div id="centerImage">
+					<div id="transitionButton">
+						<button id="rightTransition" onclick="carouselRight()">&#8658;</button>
+						<button id="leftTransition" onclick="carouselLeft()">&#8656;</button>
+					</div>
+				</div>
+				<div id="rightImage"></div>
+			</div>
+			<div id="lowerContainer">
+				<div id="buttonContainer">
+					<div class="button-format">
+						<button id="newUserButton" name="NewUser" value="New User" onclick="NewUser()">New User</button>
+					</div>
+					<div class="button-format">
+						<button id="signInButton" name="SignIn" value="Sign In" onclick="SignInUser()">Sign In</button>
+					</div>
+					<div class="button-format">
+						<button id="guestUserButton" name="GuestUser" value="Guest User" onclick="GuestUser()">Guest User</button>
+					</div>
+				</div>
+			</div>
+		<div>
+		<noscript>You Must Turn On JavaScript For The Full Website!</noscript>
+		
+		<script src="./js/jquery-3.1.1.min.js"></script>
+		<script src="./js/LandingPage.js"></script>
+  </body>
+</html>

@@ -38,10 +38,9 @@ function displayOtherTab() {
 
 function setToDefaultTab(elementName, elementId) {
 	var x = document.getElementsByName(elementName)[0];
-	x.style.backgroundColor="grey";
+	x.style.backgroundColor="bab6b6";
 	x.style.color="white";
 	x.style.textShadow="none";
-	x.style.borderBottom="solid 3px white";
 	
 	document.getElementById(elementId).style.display="none";
 }
@@ -53,3 +52,4 @@ function activeTab(elementName) {
 	x.style.textShadow="2px 2px 2px black";
 	x.style.borderBottom="solid 3px 61b8e8";
 }
+
