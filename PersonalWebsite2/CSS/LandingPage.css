@@ -1,0 +1,54 @@
+body {
+	background-color: #ddd;
+}
+
+input {
+	width: 200px;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	height: 2rem;
+}
+
+#signIn {
+	float: right;
+	margin-left: 5px;
+}
+
+#username {
+	float: right;
+	margin: 3px 5px 0 0;
+}
+
+#password {
+	float: right;
+	margin: 3px 5px 0 0;
+}
+
+.jumbotron {
+	background-color: #1E88E5;
+	color: white;
+	border-radius: 0;
+}
+
+#newUser {
+	margin: 10px 0 -20px 0;
+	font-size: 1.3rem;
+}
+
+.container {
+	text-align: center;
+}
+
+.left-align {
+	text-align: left;
+}
+
+#resume {
+	background-color: #ddd;
+	color: black;
+}
+
+.text-container {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
