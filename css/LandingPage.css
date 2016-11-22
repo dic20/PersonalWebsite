@@ -1,98 +1,54 @@
-body, div {
-	padding: 0;
-	margin: 0;
+body {
+	background-color: #ddd;
 }
 
-#mainContainer {
-	width: 100%;
-	height: 100%;
+input {
+	width: 200px;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	height: 2rem;
 }
 
-.carousel-container {
-	width: 100%;
-	height: 40%;
-	display: flex;
-	display: -webkit-flex;
-	background-color: black;
+#signIn {
+	float: right;
+	margin-left: 5px;
 }
 
-#rightImage {
-	height: 100%;
-	width: 15%;
-	background-image: url("../images/landscape.jpeg");
-	background-size: 100% 100%;
-	opacity: 0.3;
+#username {
+	float: right;
+	margin: 3px 5px 0 0;
 }
 
-#leftImage {
-	height: 100%;
-	width: 15%;
-	background-image: url("../images/free2.jpg");
-	background-size: 100% 100%;
-	opacity: 0.3;
+#password {
+	float: right;
+	margin: 3px 5px 0 0;
 }
 
-#centerImage {
-	position: relative;
-	height: 100%;
-	width: 70%;
-	background-image: url("../images/free.jpg");
-	background-size: 100% 100%;
+.jumbotron {
+	background-color: #1E88E5;
+	color: white;
+	border-radius: 0;
 }
 
-#transitionButton {
-	position: absolute;
-	width: 100%;
-	display: flex;
-	display: -webkit-flex;
-	bottom: 60%;
+#newUser {
+	margin: 10px 0 -20px 0;
+	font-size: 1.3rem;
 }
 
-#transitionButton > button:hover {
-	cursor: pointer;
-}
-
-#rightTransition {
-	position: absolute;
-	opacity: 0.7;
-	border-radius: 2rem;
-	right: 0;
-}
-
-#leftTransition {
-	position: absolute;
-	opacity: 0.7;
-	border-radius: 2rem;
-}
-
-#lowerContainer {
-	width: 100%;
-	height: 70%;
-}
-
-#buttonContainer {
-	width: 70%;
-	height: 100%;
-	margin: auto;
-	padding-top: 5%;
-}
-
-.button-format {
-	width: 100%;
+.container {
 	text-align: center;
-	padding: 3% 0 3% 0;
 }
 
-.button-format > button {
-	width: 20%;
-	height: 10%;
-	overflow: auto;
-	text-align: center;
-	font-family: 'Arial Black', arial, serif;
-	font-size: 1rem;
+.left-align {
+	text-align: left;
 }
 
-.button-format > button:hover {
-	cursor: pointer;
-	color: blue;
+#resume {
+	background-color: #ddd;
+	color: black;
+}
+
+.text-container {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
