@@ -14,7 +14,7 @@
 				<h1>Welcome New User</h1>
 			</div>
 			<div id="formHolder">
-				<form>
+				<form method="POST" action="CreateAccount.php">
 					<fieldset>
 						<legend>Name:</legend>
 						<label for="fname">First Name:</label>
@@ -38,16 +38,16 @@
 						<br />
 
 						<label for="uname">Username:</label>
-						<input type="text" id="uname" value="" name="uname" placeholder="Username" required>
+						<input type="text" id="uname" value="" name="username" placeholder="Username" required>
 						<br />
 
 						<label for="pass">Password:</label>
-						<input type="password" id="pass" value="" name="pass" placeholder="************" required>
+						<input type="password" id="pass" value="" name="password" placeholder="************" required>
 
 						<label for="pass2">Confirm Password:</label>
 						<input type="password" id="pass2" value="" name="pass2" placeholder="*************" required>
 					</fieldset>
-					<button type="submit" id="submitButton" name="submitButton" value="Submit" onclick="createAccount()">Create Account</button>
+					<button type="submit" id="submitButton" name="submitButton" value="Submit">Create Account</button>
 				</form>
 			</div>
 		</div>

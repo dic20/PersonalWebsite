@@ -1,6 +1,6 @@
 function createAccount() {
 	var required = document.getElementsByTagName('input');
-	var pass1 = document.getElementById("pass").value;
+	var pass1 = document.getElementById("password").value;
 	var pass2 = document.getElementById("pass2").value;
 
 	for(var i = 0; i < required.length; i++) {
@@ -15,7 +15,4 @@ function createAccount() {
 		alert("The passwords did not match");
 		return false;
 	}
-
-	event.preventDefault();
-	window.location.href="../PHP/index.php";
 }
