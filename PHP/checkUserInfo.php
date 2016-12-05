@@ -1,36 +1,15 @@
 <?php
-$servername='localhost';
-$username='root';
-$password='';
-$database='PersonalWebsite';
+session_start();
 
-//connect to database
-$db = mysqli_connect($servername, $username, $password, $database)
-or die('Error connecting to MySQL server' + $db->Error);
+require_once 'FunctionList.php';
 
-//query database$query = "SELECT * FROM user_info";
-$query = "SELECT * FROM user_info";
-mysqli_query($db, $query) or die ('Error querying database');
-
-$result = mysqli_query($db, $query);
-$row = mysqli_fetch_array($result);
-
-while ($row = mysqli_fetch_array($result)) {
-  echo $row['first_name']. ' ' .$row['last_name']. ' ' . $row['email'];
+if(check_username_password()) {
+  $_SESSION['registered_user'] = true;
+  redirect_to('index.php');
+} else {
+  $_SESSION['registered_user'] = false;
+  redirect_to('LandingPage.php');
 }
 
-//close database
-mysqli_close($db);
-
-// IF ($_SERVER['REQUEST_METHOD'] == 'GET') {
-//   $USERNAME = EXTRACT_DATA($_GET['USERNAME']);
-//   $PASS = EXTRACT_DATA($_GET['PASSWORD']);
-// }
-//
-// FUNCTION EXTRACT_DATA($INPUT) {
-//   $INPUT = TRIM($INPUT);
-//   $INPUT = STRIPSLASHES($INPUT);
-//   $INPUT = HTMLSPECIALCHARS($INPUT);
-//   RETURN $INPUT;
-// }
+IsAUser();
 ?>
