@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  require_once 'FunctionList.php';
+?>
 <!DOCTYPE html5>
 <html>
 	<head>

@@ -2,6 +2,10 @@
 	session_start();
 	require_once 'ConnectToDatabase.php';
 	$username = "";
+	//setting this value to true if it is not already set prevents the Not registered user line from displaying before user tries to login
+	if(!isset($_SESSION['registered_user'])) {
+		$_SESSION['registered_user'] = true;
+	}
 ?>
 <!DOCTYPE html5>
 <html>
@@ -37,7 +41,7 @@
 		</nav>
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-3">Personal Promotional Website</h1>
+        <h1 class="display-3"><b>Personal Promotional Website</b></h1>
         <button class="btn btn-secondary" id="newUser" onclick="NewUser()">New User</button>
       </div>
     </div>
@@ -134,6 +138,10 @@
 						</ul>
 					</article>
 	      </div>
+				<footer id="footer" class="container-fluid">
+	      	<h1>Daniel Critchfield</h1>
+	      	<p>2016</p>
+	    	</footer>
 	    </div>
 		</div>
     <noscript>You must turn on javascript to use this site!</noscript>

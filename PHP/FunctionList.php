@@ -1,6 +1,33 @@
 <?php
 require_once 'ConnectToDatabase.php';
 
+function getUserName($userId) {
+  $db = connect_database('localhost', 'root', '', 'personalwebsite');
+
+  $query = "SELECT first_name FROM user_info WHERE id = '{$userId}' LIMIT 1";
+  $result = mysqli_query($db, $query);
+  $row = mysqli_fetch_assoc($result);
+  return $row['first_name'];
+}
+
+function getUserId($username) {
+  $db = connect_database('localhost', 'root', '', 'personalwebsite');
+  $safe_username = mysqli_real_escape_string($db, $username);
+
+  $query = "SELECT id FROM user_info WHERE username = '{$safe_username}' LIMIT 1";
+  $result = mysqli_query($db, $query);
+  $row = mysqli_fetch_assoc($result);
+  return $row['id'];
+}
+
+function extract_data($input) {
+  $input = trim($input);
+  $input = stripslashes($input);
+  $input = htmlspecialchars($input);
+  return $input;
+}
+//code referenced from http://www.w3schools.com/php/php_form_validation.asp
+
 function check_username_password() {
   $db = connect_database('localhost', 'root', '', 'personalwebsite');
 
