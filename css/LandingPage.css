@@ -25,13 +25,25 @@ input {
 }
 
 .jumbotron {
-	background-color: #1E88E5;
-	color: white;
+	background-image: url('../IMG/9728.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	border-radius: 0;
+	color: white;
+	font-style: bold;
+	height: 40%;
+}
+
+.jumbotron > .container > h1 {
+	text-shadow:
+		2px 2px black,
+		-2px 2px black,
+		2px -2px black,
+		-2px -2px black !important;
 }
 
 #newUser {
-	margin: 10px 0 -20px 0;
+	margin-top: 3% 0 -20px 0;
 	font-size: 1.3rem;
 }
 
@@ -44,11 +56,28 @@ input {
 }
 
 #resume {
+	padding-top: 15px;
 	background-color: #ddd;
-	color: black;
 }
 
 .text-container {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
+}
+
+.error {
+	display: none;
+	color: red;
+}
+
+#footer {
+  padding-left: 5%;
+  width: 100%;
+  bottom: 0;
+  height: 120px;
+}
+
+#footer > h1 {
+  padding-top: 30px;
+  text-align: left;
 }

@@ -8,11 +8,15 @@ function displayDiv(disId, hideId, activeNavDiv, inactiveNavDiv) {
   }
 
   //making active nav-div highlighted
-  $('#' + activeNavDiv).css('background-color', '#1E88E5');
+  $('#' + activeNavDiv).css('background-color', '#D5D5D5');
+  $('#' + activeNavDiv).children().css('color', '#96858F');
+  $('#' + activeNavDiv).children().css('text-shadow', '1px 1px white');
 
   //making inactive nav-div un-highlighted
   for (j = 0; j < inactiveNavDiv.length; j++) {
-    $('#' + inactiveNavDiv[j]).css('background-color', '#ddd');
+    $('#' + inactiveNavDiv[j]).css('background-color', '#5859B4');
+    $('#' + inactiveNavDiv[j]).children().css('color', '#D5D5D5');
+    $('#' + inactiveNavDiv[j]).children().css('text-shadow', '2px 2px black, -2px 2px black, 2px -2px black, -2px -2px black');
   }
 }
 

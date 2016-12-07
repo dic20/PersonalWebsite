@@ -1,3 +1,12 @@
+<?php
+	session_start();
+	require_once 'ConnectToDatabase.php';
+	$username = "";
+	//setting this value to true if it is not already set prevents the Not registered user line from displaying before user tries to login
+	if(!isset($_SESSION['registered_user'])) {
+		$_SESSION['registered_user'] = true;
+	}
+?>
 <!DOCTYPE html5>
 <html>
 	<head>
@@ -12,17 +21,27 @@
 			<link rel="stylesheet" href="../CSS/navItems.css">
 	</head>
 	<body>
+		<?php
+			//need to account for page reloads
+			if ($_SESSION['registered_user'] == false) {
+				echo 'Not a registered user';
+			}
+		?>
+		<?php connect_database('localhost', 'root', '', 'personalwebsite');?>
 		<nav class="navbar navbar-static-top navbar-dark bg-inverse">
 			<a class="navbar-brand" href="#">Logo</a>
-			<form method="get" action="checkUserInfo.php">
+			<form method="POST" action="checkUserInfo.php">
 				<button class="btn btn-primary" id="signIn">Sign In</button>
 				<input id="password" type="password" name="password" value="" placeholder=" ***********" required>
 				<input id="username" type="username" name="username" value="" placeholder=" Username" required>
+				<div class="error">
+					<p>Not a registered user.</p>
+				</div>
 			</form>
 		</nav>
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-3">Personal Promotional Website</h1>
+        <h1 class="display-3"><b>Personal Promotional Website</b></h1>
         <button class="btn btn-secondary" id="newUser" onclick="NewUser()">New User</button>
       </div>
     </div>
@@ -119,6 +138,10 @@
 						</ul>
 					</article>
 	      </div>
+				<footer id="footer" class="container-fluid">
+	      	<h1>Daniel Critchfield</h1>
+	      	<p>2016</p>
+	    	</footer>
 	    </div>
 		</div>
     <noscript>You must turn on javascript to use this site!</noscript>
