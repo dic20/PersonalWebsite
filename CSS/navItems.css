@@ -51,15 +51,25 @@ div, ul, nav {
 #logoDiv {
 	height: 18%;
 	width: 100%;
+<<<<<<< HEAD
 	border-bottom: 1px solid #D5D5D5;
 	overflow: hidden;
 	text-align: center;
+=======
+	background-color: #ddd;
+	border-bottom: 3px solid white;
+	overflow: hidden;
+>>>>>>> 55bd6fc55c29a63b33e5ad2e7b4a738f9dfe6171
 }
 
 .nav-div {
 	height: 18%;
 	width: 100%;
+<<<<<<< HEAD
 	border-bottom: 1px solid #D5D5D5;
+=======
+	border-bottom: 1px solid white;
+>>>>>>> 55bd6fc55c29a63b33e5ad2e7b4a738f9dfe6171
 	overflow: hidden;
 }
 

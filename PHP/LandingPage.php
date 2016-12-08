@@ -2,10 +2,13 @@
 	session_start();
 	require_once 'ConnectToDatabase.php';
 	$username = "";
+<<<<<<< HEAD
 	//setting this value to true if it is not already set prevents the Not registered user line from displaying before user tries to login
 	if(!isset($_SESSION['registered_user'])) {
 		$_SESSION['registered_user'] = true;
 	}
+=======
+>>>>>>> 55bd6fc55c29a63b33e5ad2e7b4a738f9dfe6171
 ?>
 <!DOCTYPE html5>
 <html>

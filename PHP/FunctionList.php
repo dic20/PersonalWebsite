@@ -1,6 +1,7 @@
 <?php
 require_once 'ConnectToDatabase.php';
 
+<<<<<<< HEAD
 function getUserName($userId) {
   $db = connect_database('localhost', 'root', '', 'personalwebsite');
 
@@ -28,6 +29,8 @@ function extract_data($input) {
 }
 //code referenced from http://www.w3schools.com/php/php_form_validation.asp
 
+=======
+>>>>>>> 55bd6fc55c29a63b33e5ad2e7b4a738f9dfe6171
 function check_username_password() {
   $db = connect_database('localhost', 'root', '', 'personalwebsite');
 
